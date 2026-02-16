@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Certificate Verification</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✅ FONT AWESOME (Required for Icons) -->
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:white;
+}
+
+/* TOP THIN COLOR LINE */
+.top-line{
+    height:3px;
+    background: linear-gradient(
+        to right,
+        #3cb44b 33.33%,
+        #1f77b4 33.33%,
+        #1f77b4 66.66%,
+        #f55220 66.66%
+    );
+}
+
+/* HEADER */
+.header{
+    background:white;
+    position:relative;
+    padding:5px 5px;
+    height:80px;
+}
+
+/* Left Hindi Logo */
+.header .hindi-logo:first-child{
+    position:absolute;
+    left:480px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+/* Right Hindi Logo */
+.header .hindi-logo:last-child{
+    position:absolute;
+    right:480px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+/* Remove underline & keep blue */
+.header .hindi-logo{
+    font-size:42px;
+    font-weight:bold;
+    color:#1f77b4;
+    text-decoration:none;
+}
+
+/* Center Logo */
+.header img{
+    display:block;
+    margin:0 auto;
+    height:80px;
+}
+.top-support{
+    background: #e6e6e6;
+    display: flex;
+    justify-content: flex-end;   /* keep items on right */
+    align-items: center;
+    padding: 8px 20px;   /* reduce side padding */
+    font-size: 14px;
+}
+.top-support a{
+    margin-left: 15px;   /* small spacing */
+    text-decoration: none;
+    color: #333;
+}
+.support-left{
+    color: #333;
+}
+
+.support-right a{
+    text-decoration: none;
+    padding: 8px 18px;
+    margin-left: 10px;
+    color: #333;
+}
+
+.support-right a:first-child{
+    background: #f58220;   /* orange login button */
+    color: white;
+}
+
+.support-right a.register{
+    background: #ddd;
+}
+/* ORANGE MENU BAR */
+.menu {
+    background: #f58220;
+    padding: 12px 40px;
+}
+
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* VERIFIED SECTION */
+.container {
+    width: 500px;
+    margin: 20px auto;
+    background-color: hsl(0, 0%, 100%);
+    padding: 5px 5px;
+}
+
+.verified-section {
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+
+.verified-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.verified-text {
+    color: #5890d4;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.details div {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 80;
+    margin-left: -80px;   /* Remove extra space */
+}
+
+/* FOOTER */
+.footer{
+    background:white;
+    padding:40px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    margin-top:10px;
+}
+
+.footer div{
+    margin:10px;
+}
+
+.footer h4{
+    
+    margin-bottom:15px;
+}
+
+.footer a{
+    text-decoration:none;
+    color:black;
+    display:block;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+/* ✅ ICON STYLE (Circle like screenshot) */
+.footer i {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    background: hsl(0, 0%, 5%);
+    color: white;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.footer-links {
+    transform: translateX(250px);
+}
+.footer-disclaimer{
+    padding-top: 57px;
+    transform: translateX(70px);
+}
+.footer-stay{
+    padding-top: 10px;
+    transform: translateX(-100px);
+
+}
+.app-img{
+    width:150px;
+    margin-bottom:10px;
+}
+.app-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: -10px;
+    transform: translateX(-250px);
+}
+
+.app-left h4{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.store-btn{
+    width: 170px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.app-right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.side-logo{
+    width: 120px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="top-support">
+    
+    <div class="support-left">
+        <a href="https://sdms.symphonysummit.com/" 
+           style="text-decoration:none; color:#333;">
+            <i class="fa-solid fa-phone"></i> Technical Support
+        </a>
+    </div>
+
+    <div class="support-right">
+        <a href="https://admin.skillindiadigital.gov.in/login">
+           LOGIN
+        </a>
+
+        <a href="https://admin.skillindiadigital.gov.in/direct-registration" 
+           class="register">
+           Register
+        </a>
+    </div>
+
+</div>
+<div class="top-line"></div>
+
+<!-- HEADER -->
+<div class="header">
+  <a href="https://admin.skillindiadigital.gov.in/login" class="hindi-logo">
+    कौशल भारत
+  </a>
+
+  <a href="https://admin.skillindiadigital.gov.in/login">
+    <img src="LOGO.png" alt="Center Logo" />
+  </a>
+
+  <a href="https://admin.skillindiadigital.gov.in/login" class="hindi-logo">
+    कौशल भारत
+  </a>
+</div>
+
+<!-- MENU -->
+<div class="menu">
+    <a href="https://admin.skillindiadigital.gov.in/login" target="_blank" class="home-link">
+        HOME
+    </a>
+</div>
+
+<!-- VERIFIED CONTENT -->
+<div class="container">
+    <div class="verified-section">
+        <img class="verified-icon" src="verified.png" alt="Verified Icon">
+        <div class="verified-text">Verified</div>
+    </div>
+
+    <div class="details">
+        <div>CandidateName : KUNISETTY ANIL KUMAR</div>
+        <div>CandidateID : CAN_37086238</div>
+        <div>SectorName : Tourism & Hospitality</div>
+        <div>QP Name : Guest Service Associate (Food & Beverage)</div>
+        <div>QP Code : THC/Q0301-SI001</div>
+        <div>QPVersion : 4.0</div>
+        <div>Result : PASS</div>
+        <div>Document ID : 28fyn6xso7hlr</div>
+        <div>IssuanceDate : 27-Apr-2025</div>
+        <div>Type : Certificate</div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+    <div class="footer-links">
+        <h4>LINKS</h4>
+        <a href="https://admin.skillindiadigital.gov.in/login">home</a>
+        <a href="https://www.skilldevelopment.gov.in/ssc.html" target="_blank">ssc</a>
+        <a href="https://s3.ap-south-1.amazonaws.com/nsdcuatpublic/videos/SkillIndiaPortal.mp4" target="_blank">TP Scheme Help Video</a>
+        <a href="https://betacloud.ncs.gov.in/" target="_blank">National Career Service</a>
+        <a href="#">User Manuals</a>
+        <a href="#">Sector & SSC</a>
+        <a href="#">Verify Issued Document</a>
+    </div>
+
+    <div class="footer-disclaimer">
+    <a href="#">DISCLAIMER</a>
+    <a href="#">PRIVACY_POLICY</a>
+    <a href="#">TERMS_CONDITIONS</a>
+    <a href="#">CONTACT_US</a>
+    <a href="#">QP Listing</a>
+</div>
+
+    <div class="footer-stay">
+        <h4>STAY CONTACT</h4>
+
+        <a href="https://www.facebook.com/NSDCIndiaOfficial" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i> Facebook
+        </a>
+
+        <a href="https://x.com/nsdcindia" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i> Twitter
+        </a>
+    </div>
+
+    <div class="app-section">
+
+    <!-- LEFT SIDE -->
+    <div class="app-left">
+
+        <h4>CANDIDATE_REGISTRATION_APP_ONLINE</h4>
+        <a href="SDMS-Candidate.apk" download>
+    <img class="store-btn" src="google play.JPG" alt="Google Play">
+</a>
+
+        <h4>CANDIDATE_REGISTRATION_APP_OFFLINE</h4>
+           <a href="SDMS-Candidate-Offline.apk" download>
+    <img class="store-btn" src="google play.JPG" alt="Google Play">
+</a>
+
+        <h4>ASSESSOR APP</h4>
+         <a href="SDMS_ASSESSOR.apk" download>
+    <img class="store-btn" src="google play.JPG" alt="Google Play">
+</a>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="app-right">
+    
+    <img src="NSDC.png" class="side-logo" alt="NSDC Logo">
+
+    <a href="https://betacloud.ncs.gov.in/" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <img src="NATIONAL CAREER SERVICE.png" 
+             class="side-logo" 
+             alt="NCS Logo">
+    </a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
